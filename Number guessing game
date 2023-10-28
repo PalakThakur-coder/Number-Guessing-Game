@@ -1,0 +1,28 @@
+//Number Guessing
+import java.util.Scanner;
+public class NumberGuessing {
+	public static void main(String st[])
+	{
+		int randomNumber = (int)(Math.random()*100)+1;
+		
+		while(true) {
+		System.out.println("Enter your Guess a number between 1 to 100");
+		
+		 Scanner sc = new Scanner(System.in);
+		 int Guess = sc.nextInt();
+		 
+		if( Guess == randomNumber) {
+		System.out.println("Correct! You win!");
+		break;
+		}
+		else if(randomNumber > Guess)
+		{
+			System.out.println("Oops! The Number is Smaller. Guess Again");
+		}
+		else {
+			System.out.println("Oops! The Number is Greater . Guess Again");
+		}
+	}
+	}
+
+}
